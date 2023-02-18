@@ -30,11 +30,18 @@ div.user p{
 div.user img{
     width: 20px;
 }
-
+section div#accordion{
+    width: 100%;
+}
 section div.urgentes{
     margin-bottom: 20px;
+    width: 300px;
     background-color: var(--background
     );
+}
+
+section div#accordion p{
+    width: 100%;
 }
 
 section div.pending_tasks{
