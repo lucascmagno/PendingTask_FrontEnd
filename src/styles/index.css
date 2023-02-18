@@ -51,12 +51,20 @@ section form input{
     padding-left: 15px;
 }
 
+section form input:focus{
+    border: none;
+    border-bottom: 3px solid green;
+}
+
 section form img{
     transform: translate(70%, 160%);
 }
 
 form img.senha{
     transform: translate(70%, 200%);
+}
+form img.email{
+    transform: translate(70%, 160%);
 }
 
 section form label{
