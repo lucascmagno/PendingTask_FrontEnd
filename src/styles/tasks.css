@@ -46,8 +46,9 @@ button#create-task:hover{
     background-color: var(---background-hover);
 }
 
-div.create-task{
-
+div.geral-content{
+    border: 1px solid;
+    width: 400px;
 }
 section div#accordion{
     width: 100%;
