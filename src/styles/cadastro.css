@@ -8,7 +8,7 @@
 :root{
     --background: #F7F7F7;
     --background-button: #2BB673;
-    ;  
+    --background-button-hover: #137948;
 }
 
 html{
@@ -42,13 +42,25 @@ section form{
 }
 section form input{
     margin-left: 5px;
+    margin-bottom: 20px;
     width: 270px;
     height: 40px;
     left: 32px;
     border-radius: 10px;
+    padding-left: 15px;
     border: none;
 }
 
+section form img{
+    transform: translate(70%, 150%);
+}
+
+form img.senha{
+    transform: translate(70%, 200%);
+}
+form img.email{
+    transform: translate(70%, 160%);
+}
 section form label{
     font-weight: bold;
 }
@@ -56,6 +68,11 @@ form .submit{
     background-color: var(--background-button);
     color: #FFFFFF;
     cursor: pointer;
+    border-left: 3px solid green;
+}
+form .submit:hover{
+    background: var(--background-button-hover);
+    transition: all .7s;
 }
 span.span_bold{
     font-weight: bold;
