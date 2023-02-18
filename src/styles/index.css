@@ -20,7 +20,7 @@ body{
 }
 div.header{
     margin: auto;
-    margin-top: 40px;
+    padding-top: 40px;
     text-align: center;
 }
 h2{
