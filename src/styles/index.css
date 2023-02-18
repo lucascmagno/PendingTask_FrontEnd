@@ -51,20 +51,17 @@ section form input{
     padding-left: 15px;
 }
 
-section form input:focus{
+section form input:hover{
     border: none;
     border-bottom: 3px solid green;
-}
-
-section form img{
-    transform: translate(70%, 160%);
+    transition: all .3s;
 }
 
 form img.senha{
-    transform: translate(70%, 200%);
+    transform: translate(-230%, 260%);
 }
 form img.email{
-    transform: translate(70%, 160%);
+    transform: translate(-230%, 185%);
 }
 
 section form label{
@@ -74,6 +71,7 @@ form .submit{
     background-color: var(--background-button);
     color: #FFFFFF;
     cursor: pointer;
+    border: none;
     border-left: 3px solid green;
 }
 form .submit:hover{
