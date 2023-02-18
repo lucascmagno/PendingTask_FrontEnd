@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--Link para os estilos-->
-    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
     <!--Link para os scripts-->
 </head>
 <body>
-    <div>
-        <span class="span_bold">Tarefas</span> Pendentes  
-        <span class="span_bold">IFPA 2023</span>
+    <div class="header">
+        <span class="span_bold">Tarefas</span> Pendentes
+        <span class="span_bold" style="display: block;">IFPA 2023</span>
     </div>
-    <h1>Crie uma conta</h1>
     <section>
+        <h2>Crie uma conta</h2>
         <form action="#" method="post">
             <label for="inome">Primeiro nome</label>
             <input type="text" name="nome" id="inome" placeholder="Digite seu nome">
             <label for="iemail">Email</label>
-            <input type="email" name="iemail" id="iemail" placeholder="Digite seu email"><br>
+            <input type="email" name="iemail" id="iemail" placeholder="Digite seu email">
             <label for="isenha">Senha</label>
-            <input type="password" name="senha" id="isenha" placeholder="Digite sua senha"><br>
+            <input type="password" name="senha" id="isenha" placeholder="Digite sua senha">
         
-            <input type="submit" value="Entrar Agora">
+            <input type="submit" value="Criar Conta " class="submit">
         </form>
         Já tem uma conta?
-        <span class="span_bold">Entre agora</span>
+        <span class="span_bold"><a href="../../index.html" style="text-decoration: none;">Entre agora</a></span>
     </section>
 </body>
 </html>
