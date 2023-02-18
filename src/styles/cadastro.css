@@ -76,7 +76,7 @@ section form input:hover{
     transition: all .3s;
 }
 form img.user{
-    transform: translate(-600%, 190%);
+    transform: translate(-1100%, 190%);
 }
 form img.senha{
     transform: translate(-290%, 290%);
