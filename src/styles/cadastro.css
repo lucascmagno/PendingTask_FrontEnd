@@ -25,10 +25,22 @@ div.header{
     padding-top: 40px;
     text-align: center;
     margin-bottom: 25px;
+    opacity: .8;
 }
 h2{
     font-weight: 600;
-    margin-bottom: 20px;
+    opacity: .9;
+}
+p.content{
+    font-size: 12px;
+    width: 100%;
+    text-align: justify;
+    opacity: .8;
+    margin-bottom: 8px;
+}
+div.paragrafos{
+    padding: 0 15px;
+    text-align: center;
 }
 input, label{
     text-indent: 20px;
@@ -46,6 +58,7 @@ section form{
 }
 form label{
     margin-bottom: 5px;
+    opacity: .8;
 }
 section form input{
     margin-left: 5px;
@@ -62,16 +75,14 @@ section form input:hover{
     border-bottom: 3px solid green;
     transition: all .3s;
 }
-
-
 form img.user{
-    transform: translate(-590%, 170%);
+    transform: translate(-600%, 190%);
 }
 form img.senha{
-    transform: translate(-270%, 290%);
+    transform: translate(-290%, 290%);
 }
 form img.email{
-    transform: translate(-240%, 220%);
+    transform: translate(-270%, 220%);
 }
 section form label{
     font-weight: bold;

@@ -16,23 +16,39 @@
     </div>
     <section>
         <h2>Crie uma conta</h2>
-        <form action="#" method="post">
-            <label for="inome">Primeiro nome<img src="../components/images/Pessoa (Nome de Usuário).svg" width="20" alt="Usuario" class="user"></label>
+        <div class="paragrafos">
+            <p class="content">Nos preocupamos com cada detalhe para você ficar sempre atualizado em suas atividades.</p>
+            <p class="content"><b>Feito por Estudantes para Estudantes</b></p>
+        </div>
+        <form action="#" method="post" autocomplete="on">
+            <label for="inome">Primeiro nome
+                <img src="../components/images/Pessoa (Nome de Usuário).svg" width="20" alt="Usuario" class="user">
+                <span style="color: red
+                ;">*</span>
+            </label>
             
-            <input type="text" name="nome" id="inome" placeholder="Digite seu nome">
+            <input type="text" name="nome" id="inome" placeholder="Digite seu nome" required autocomplete="name">
 
-            <label for="iemail">Email<img src="../components/images/Email.svg" width="20" alt="email" class="email"></label>
+            <label for="iemail">Email
+                <img src="../components/images/Email.svg" width="20" alt="email" class="email">
+                <span style="color: red
+                ;">*</span>
+            </label>
             
-            <input type="email" name="iemail" id="iemail" placeholder="Digite seu email">
+            <input type="email" name="iemail" id="iemail" placeholder="Digite seu email" required autocomplete="email">
 
-            <label for="isenha">Senha<img src="../components/images/Vector.svg" width="20" alt="Senha" class="senha"></label>
+            <label for="isenha">Senha
+                <img src="../components/images/Vector.svg" width="20" alt="Senha" class="senha">
+                <span style="color: red
+                ;">*</span>
+            </label>
             
-            <input type="password" name="senha" id="isenha" placeholder="Digite sua senha">
+            <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" required autocomplete="current-password">
             <label for="isubmit"><img src="../components/images/Seta (Entrar).svg" width="20" alt="Seta" class="seta_entrar"></label>
             <input type="submit" id="isubmit" value="Criar Conta " class="submit">
         </form>
         
-        <span style="font-size: 12px;">Já tem uma conta?<a href="../../index.html" style="text-decoration: none;">Entre agora</a></span>
+        <span style="font-size: 12px;">Já tem uma conta?<a href="../../index.html" style="text-decoration: none;"> Entre agora</a></span>
     </section>
 </body>
 </html>
