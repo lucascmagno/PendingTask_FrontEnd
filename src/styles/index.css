@@ -23,11 +23,15 @@ div.header{
     padding-top: 40px;
     text-align: center;
 }
-h2{
-    margin-left: 20px;
+h2, input, label{
+    text-indent: 20px;
 }
 section{
-    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin: auto;
 }
 section form{
     display: flex;
@@ -48,10 +52,12 @@ section form label{
 form .submit{
     background-color: var(--background-button);
     color: #FFFFFF;
+    cursor: pointer;
 }
 span.span_bold{
     font-weight: bold;
 }
 span a{
     color: black;
+    cursor: pointer;
 }
