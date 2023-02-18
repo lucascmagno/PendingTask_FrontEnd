@@ -1,4 +1,9 @@
 @charset "utf-8";
+
+:root{
+    --background: #F7F7F7;
+}
+
 section{
     display: flex;
     flex-direction: column;
@@ -13,30 +18,44 @@ div.user{
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
     padding-top: 20px;
     margin-bottom: 20px;
+    gap: 40px;
+}
+
+div.user p{
+    font-size: 14px;
 }
 
 div.user img{
-    width: 25px;
+    width: 20px;
 }
 
 section div.urgentes{
     margin-bottom: 20px;
+    background-color: var(--background
+    );
 }
 
 section div.pending_tasks{
     margin-bottom: 20px;
+    background-color: var(--background
+    );
 }
 
-section section.completed_tasks{
+section div.completed_tasks{
+    background-color: var(--background
+    );
+}
 
+section div.pending_tasks p{
+    display: flex;
+    justify-content: space-between;
 }
 
 section div p{
     font-size: 14px;
-    width: 100%;
+    width: 250px;
     text-indent: 22px;
 }
 section div{
@@ -44,6 +63,9 @@ section div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    background-color: var(--background
+    );
 }
 section ul{
     list-style-type: none;
@@ -55,7 +77,7 @@ section ul li{
     font-size: 14px;
     margin-bottom: 5px;
     margin-top: 5px;
-    background: #FFFFFF;
+    background: #fae9e9;
     box-shadow: 0px 4px 8px rgba(200, 200, 200, 0.15);
     border-radius: 10px;
 }

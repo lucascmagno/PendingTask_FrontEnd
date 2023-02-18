@@ -5,9 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas</title>
-    <!--Link para os estilos -->
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/tasks.css">
+    
+    <!--Link para Jquery-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion({
+                collapsible: true
+            });
+        } );
+        </script>
+  
+  <!--Link para os estilos -->
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/tasks.css">
 </head>
 <body>
     <div class="user">
@@ -18,34 +32,28 @@
                 <span>Desenvolvimento de Sistemas</span>
             </p>
         </div>
-
-        <input type="search" name="Pesuisa" id="ipesquisa">
-        <label for="ipesquisa">
             <img src="../components/images/Pesquisa.svg" width="30" alt="">
-        </label>
     </div>
 
-    <section id="tasks">
+<section id="tasks">
+    <div id="accordion">
+        <p>Urgentes: xx</p>
         <div class="urgentes">
-            <p>Urgentes: xx</p>
             <ul>
                 <li>Isso é uma Atividade (Nome dela fica aqui)</li>
             </ul>
         </div>
-
+        <p>Tarefas pendentes: xx</p>
         <div class="pending_tasks">
-            <p>Tarefas pendentes: xx
-                <span>
-                    Filtrar por <b>Prioridade </b> 
-                    <select name="select" id="iselect">
-                        <option value="" selected></option>
-                        <option value="alta">1</option>
-                        <option value="media">2</option>
-                        <option value="alta">3</option>
-                    </select>
-                </span>
+            <p>
+                <span>Filtrar por <b>Prioridade </b></span>
+                <select name="select" id="iselect">
+                    <option value="" selected></option>
+                    <option value="alta">1</option>
+                    <option value="media">2</option>
+                    <option value="alta">3</option>
+                </select>
             </p>
-            
             <ul>
                 <li>Isso é uma Atividade (Nome dela fica aqui)</li>
                 <li>Isso é uma Atividade (Nome dela fica aqui)</li>
@@ -54,15 +62,16 @@
             </ul>
         </div>
 
+        <p>Atividades Concluidas: xx</p>
         <div class="completed_tasks">
-            <p>Atividades Concluidas: xx</p>
             <ul>
                 <li>Isso é uma Atividade (Nome dela fica aqui)</li>
                 <li>Isso é uma Atividade (Nome dela fica aqui)</li>
             </ul>
         </div>
+    </div>
 
-        <a href="../../index.html">Voltar</a>
-    </section>
+    <a href="../../index.html">Voltar</a>
+</section>
 </body>
 </html>
