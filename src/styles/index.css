@@ -7,6 +7,8 @@
 
 :root{
     --background: #F7F7F7;
+    --background-button: #2BB673;
+    ;  
 }
 
 html{
@@ -15,4 +17,41 @@ html{
 body{
     background-color: var(--background);
     height: 100vh;
+}
+div.header{
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+h2{
+    margin-left: 20px;
+}
+section{
+    margin: 20px 20px;
+}
+section form{
+    display: flex;
+    flex-direction: column;
+}
+section form input{
+    margin-left: 5px;
+    width: 270px;
+    height: 40px;
+    left: 32px;
+    border-radius: 10px;
+    border: none;
+}
+
+section form label{
+    font-weight: bold;
+}
+form .submit{
+    background-color: var(--background-button);
+    color: #FFFFFF;
+}
+span.span_bold{
+    font-weight: bold;
+}
+span a{
+    color: black;
 }
