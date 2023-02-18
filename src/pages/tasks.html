@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <!--Link para os estilos -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/tasks.css">
+</head>
+<body>
+    <div class="user">
+        <img src="../components/images/Pessoa (Nome de Usuário).svg" width="30" alt="Imagem de Usuário">
+
+        <input type="search" name="Pesuisa" id="ipesquisa">
+        <label for="ipesquisa">
+            <img src="../components/images/Pesquisa.svg" width="30" alt="">
+        </label>
+    </div>
+    <section id="tasks">
+        <div class="urgentes">
+            <p>Urgentes: xx</p>
+            <ul>
+                <li>Isso é uma Atividade (Nome dela fica aqui)</li>
+            </ul>
+        </div>
+
+        <div class="pending_tasks">
+            <p>Tarefas pendentes: xx
+                <span>
+                    Filtrar por <b>Prioridade </b> 
+                    <select name="select" id="iselect">
+                        <option value="" selected></option>
+                        <option value="alta">1</option>
+                        <option value="media">2</option>
+                        <option value="alta">3</option>
+                    </select>
+                </span>
+            </p>
+            
+            <ul>
+                <li>Isso é uma Atividade (Nome dela fica aqui)</li>
+                <li>Isso é uma Atividade (Nome dela fica aqui)</li>
+                <li>Isso é uma Atividade (Nome dela fica aqui)</li>
+                <li>Isso é uma Atividade (Nome dela fica aqui)</li>
+            </ul>
+        </div>
+
+        <div class="completed_tasks">
+            <p>Atividades Concluidas: xx</p>
+            <ul>
+                <li>Isso é uma Atividade (Nome dela fica aqui)</li>
+                <li>Isso é uma Atividade (Nome dela fica aqui)</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
