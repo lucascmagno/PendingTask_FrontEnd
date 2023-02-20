@@ -22,10 +22,14 @@
             <input type="email" name="iemail" id="iemail" placeholder="Digite seu email" autocomplete="ema
             ">
 
-            <label for="isenha">Senha<img src="src/components/images/Vector.svg" width="20" alt="Senha" class="senha"></label>
+            <label for="isenha">Senha
+                <img src="src/components/images/Vector.svg" width="20" alt="Senha" class="senha">
+
+                <button type="button" id="showPassword">Mostrar senha</button>
+            </label>
             
             <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" autocomplete="current-password">
-            
+
             <label for="isubmit"><img src="./src/components/images/Seta (Entrar).svg" width="20" alt="seta entrar" class="seta_entrar"></label>
             <input type="submit" id="isubmit" value="Entrar Agora" class="submit">
         </form>
@@ -33,5 +37,21 @@
         <span style="font-size: 12px;"> Novo por aqui?<a href="./src/pages/cadastro.html" style="text-decoration: none;"> Crie uma conta</a></span>
         <a href="./src/pages/tasks2.html">Página Tarefas</a>
     </section>
+    <script>
+        const passwordInput = document.getElementById("isenha");
+        const showPasswordButton = document.getElementById("showPassword");
+    
+        showPasswordButton.addEventListener("click", function() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            showPasswordButton.textContent = "Ocultar senha";
+        } else {
+            passwordInput.type = "password";
+            showPasswordButton.textContent = "Mostrar senha";
+        }
+        });
+    </script>
+    
+
 </body>
 </html>

@@ -41,6 +41,7 @@
                 <img src="../components/images/Vector.svg" width="20" alt="Senha" class="senha">
                 <span style="color: red
                 ;">*</span>
+                <button type="button" id="showPassword">Mostrar senha</button>
             </label>
             
             <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" required autocomplete="current-password">
@@ -50,5 +51,19 @@
         
         <span style="font-size: 12px;">Já tem uma conta?<a href="../../index.html" style="text-decoration: none;"> Entre agora</a></span>
     </section>
+    <script>
+        const passwordInput = document.getElementById("isenha");
+        const showPasswordButton = document.getElementById("showPassword");
+    
+        showPasswordButton.addEventListener("click", function() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            showPasswordButton.textContent = "Ocultar senha";
+        } else {
+            passwordInput.type = "password";
+            showPasswordButton.textContent = "Mostrar senha";
+        }
+        });
+    </script>
 </body>
 </html>
