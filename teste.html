@@ -1,32 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Resizable - Animate</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-  #resizable { width: 150px; height: 150px; padding: 0.5em; }
-  #resizable h3 { text-align: center; margin: 0; }
-  .ui-resizable-helper { border: 1px dotted gray; }
+    .create-task{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      border-bottom: 1px solid black;
+    }
+    .create-task input, button, select{
+      width: 200px;
+      margin-bottom: 5px;
+    }
+    .tasks{
+
+    }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#resizable" ).resizable({
-      animate: true
-    });
-  } );
-  </script>
+  <link rel="stylesheet" href="./src/styles/tasks2.css">
 </head>
 <body>
- 
-<div id="resizable" class="ui-widget-content">
-  <h3 class="ui-widget-header">Animate</h3>
+  <!--cria as tarefas-->
+  <div class="create-task">
+    <h2>Criar Tarefa</h2><br>
+    Titulo: <input type="text" name="titulo" id="ititulo">
+
+    Matéria: <input type="text" name="materia" id="imateria">
+
+    Descrição: <input type="text" name="descricao" id="idescricao">
+
+    Entrega: <input type="datetime-local" name="data" id="idata">
+
+    Prioridade: <select name="prioridade" id="iprioridade">
+      <option value="" selected>Básico</option>
+      <option value="">medio</option>
+      <option value="">Urgente</option>
+    </select>
+    <button onclick="createTask()">Criar tarefa</button>
+  </div>
+
+  <!--Tarefas criadas-->
+<div id="tasks">
+      <!--Tarefas Pendentes-->
+      <span class="title-section" style="background-color: #2BB673; border: #2BB673;">Tarefas Pendentes: ##</span>
+
+  <div id="taskContent" class="pendente-task task-div">
+    <div class="task" id="taskText">
+        <div class="task-name">
+              <span class="task-title">Isso é uma atividade</span>
+
+              <span class="subtitle task-materia"> Desenvolvimento de Sistemas</span>
+        </div>
+      
+        <div id="taskDate" style="display: flex; align-items: center;">
+              <span class="subtitle task-date">FEV 19 <span class="bold" style="margin-left: 3px;">08:40</span></span>
+              <span class="priority intermediario"></span>
+         </div>
+    </div>
+
+    
+  </div>
 </div>
- 
- 
+  <script>
+    function createTask() {
+  // Obter os valores dos campos de formulário
+  const title = document.getElementById("ititulo").value;
+  const materia = document.getElementById("imateria").value;
+  const descricao = document.getElementById("idescricao").value;
+  const data = document.getElementById("idata").value;
+  const prioridade = document.getElementById("iprioridade").value;
+
+  // Criar um novo elemento de tarefa
+  const newTask = document.createElement("div");
+  newTask.classList.add("task");
+
+  // Adicionar o conteúdo do novo elemento
+  newTask.innerHTML = `
+    <div class="task-name">
+      <span class="task-title">${title}</span>
+      <span class="subtitle task-materia">${materia}</span>
+    </div>
+    <div id="taskDate" style="display: flex; align-items: center;">
+      <span class="subtitle task-date">${data}</span>
+      <span class="priority ${prioridade.toLowerCase()}"></span>
+    </div>
+  `;
+
+  // Adicionar o novo elemento de tarefa à seção de tarefas criadas
+  const taskContent = document.getElementById("taskContent");
+  taskContent.appendChild(newTask);
+}
+
+  </script>
 </body>
 </html>
