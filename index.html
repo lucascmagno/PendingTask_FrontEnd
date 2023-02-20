@@ -26,7 +26,7 @@
             ">
 
             <label for="isenha">Senha
-                <button type="button" id="showPassword">Mostrar senha</button>
+                <button type="button" id="showPassword"><img src="./src/components/images/Olho (habilitado).svg" alt="Senha abilitada" id="img"></button>
             </label>
             
             <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" autocomplete="current-password">
@@ -41,14 +41,14 @@
     <script>
         const passwordInput = document.getElementById("isenha");
         const showPasswordButton = document.getElementById("showPassword");
-    
+        const img = document.getElementById('img');
         showPasswordButton.addEventListener("click", function() {
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
-            showPasswordButton.textContent = "Ocultar senha";
+            //showPasswordButton.textContent = "Ocultar senha";
         } else {
             passwordInput.type = "password";
-            showPasswordButton.textContent = "Mostrar senha";
+            //showPasswordButton.textContent = "Mostrar senha";
         }
         });
     </script>
