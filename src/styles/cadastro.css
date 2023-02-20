@@ -49,7 +49,6 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
     margin: auto;
 }
 section form{
@@ -74,15 +73,6 @@ section form input:hover{
     border: none;
     border-bottom: 3px solid green;
     transition: all .3s;
-}
-form img.user{
-    transform: translate(-1100%, 190%);
-}
-form img.senha{
-    transform: translate(-290%, 290%);
-}
-form img.email{
-    transform: translate(-270%, 220%);
 }
 section form label{
     font-weight: bold;

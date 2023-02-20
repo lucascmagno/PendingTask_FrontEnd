@@ -7,6 +7,7 @@
     <title>cadastro</title>
     <!--Link para os estilos-->
     <link rel="stylesheet" href="../styles/cadastro.css">
+    <link rel="stylesheet" href="../styles/MediaQuery.css">
     <!--Link para os scripts-->
 </head>
 <body>
@@ -22,7 +23,6 @@
         </div>
         <form action="#" method="post" autocomplete="on">
             <label for="inome">Como podemos te chamar?
-                <img src="../components/images/Pessoa (Nome de Usuário).svg" width="20" alt="Usuario" class="user">
                 <span style="color: red
                 ;">*</span>
             </label>
@@ -30,7 +30,6 @@
             <input type="text" name="nome" id="inome" placeholder="Digite seu nome" required autocomplete="name">
 
             <label for="iemail">Email
-                <img src="../components/images/Email.svg" width="20" alt="email" class="email">
                 <span style="color: red
                 ;">*</span>
             </label>
@@ -38,14 +37,15 @@
             <input type="email" name="iemail" id="iemail" placeholder="Digite seu email" required autocomplete="email">
 
             <label for="isenha">Senha
-                <img src="../components/images/Vector.svg" width="20" alt="Senha" class="senha">
                 <span style="color: red
                 ;">*</span>
                 <button type="button" id="showPassword">Mostrar senha</button>
             </label>
             
             <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" required autocomplete="current-password">
-            <label for="isubmit"><img src="../components/images/Seta (Entrar).svg" width="20" alt="Seta" class="seta_entrar"></label>
+            <label for="isubmit">
+        
+            </label>
             <input type="submit" id="isubmit" value="Criar Conta " class="submit">
         </form>
         
