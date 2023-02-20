@@ -59,6 +59,7 @@ section form input{
     left: 32px;
     border-radius: 10px;
     border: none;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.178));
     padding-left: 15px;
 }
 
