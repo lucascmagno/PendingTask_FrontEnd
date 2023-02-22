@@ -1,6 +1,6 @@
 <?php
 include_once('connection.php');
-$conn = connect();
+$conn = connection();
 $id_login = 1;
 $sql = 'SELECT `pending_task`.`task`,`pending_task`.`subject`,`pending_task`.`description`,`pending_task`.`priority` FROM `pending_task` INNER JOIN `login` ON `login`.`id_login` = :id AND `pending_task`.`id_login` = :id';
 $stmt = $conn->prepare($sql);
