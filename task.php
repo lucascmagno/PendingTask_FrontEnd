@@ -8,6 +8,7 @@ $stmt->bindParam(':id', $id_login);
 $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($result as $row) : ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <div class="task" id="task-id">
 
         <div class="task-name">

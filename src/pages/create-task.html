@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie Atividade | Tarefas Pendentes IFPA</title>
+
+    <link rel="stylesheet" href="../styles/create-task.css">
+    <script scr="scripts.js"></script>
+    <script src="../scripts/AjaxCreateTask.js"></script>
+    <script>
+        // Seleciona o formulário
+        const form = document.querySelector('form');
+    
+        // Adiciona o evento de submit ao formulário
+        form.addEventListener('submit', (event) => {
+            // Previne o comportamento padrão do formulário de recarregar a página
+            event.preventDefault();
+    
+            // Chama a função createTask() definida em AjaxCreateTask.js
+            createTask();
+        });
+    </script>
+    
+</head>
+
+<body style="background-color: #F7F7F7; min-height: 100vh;display: flex;justify-content: center; margin-bottom: 50px;">
+    <div class="body-style" style="width: 500px;">
+           
+                <div class="Login-header">
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <div class="title-header">
+                <a href="dashboard.html" class="extrabold" style="margin-bottom: 6px;"><img src="../components/images/Seta (sair).svg"> Criar Tarefa</a>
+                </div>
+            </div>
+            
+            <form onsubmit="createTask(); return false;" autocomplete="on">
+                <div class="login-div" style="margin-top: 40px;" >
+                    <span class="title-section">Título</span>
+                    <input type="text" name="titulo" id="titulo" class= "input-text no-icon" required placeholder="Digite o título da tarefa">
+                </div>
+
+                <div class="login-div" >
+                    <span class="title-section">Matéria</span>
+                    <input type="text" name="materia" id="materia" class= "input-text no-icon" required placeholder="Escolha a Matéria" list="listmat">
+                    <datalist id="listmat">
+                        <option >Análise e Desenvolvimento de Sistemas</option>
+                        <option >Biologia</option>
+                        <option >Matemática</option>
+                        <option >Lingua Portuguesa</option>
+                    </datalist>
+                </div>
+
+                <div class="login-div">
+                    <span class="title-section">Descrição</span>
+                    <textarea id="descricao" class= "input-text no-icon descripition" maxlength="700" overflow="auto" placeholder="Adicione uma descrição para a tarefa..." style="resize: none;"></textarea>
+                    <div class="subtitle">Limite de Caracteres: 700</span>
+                </div>
+
+                <div style="display: flex; flex-direction: row;">
+                        
+                    <div class="login-div" style="margin-right: 16px">
+                        <span class="title-section">Entrega</span>
+                        <input type="date" id="entrega" class= "input-data" required min="today" max="2023-12-31" placeholder="20/02/2023">
+                    </div>
+
+                    <div class="login-div" >
+                        <span class="title-section">Horário</span>
+                        <input type="time" id="horario" name="materia" class= "input-text no-icon" required placeholder="Nivel de Prioridade" list="listprior">
+                    </div>
+                </div>
+
+                <div class="login-div" >
+                    <span class="title-section">Prioridade</span>
+                <select name="materia" class= "input-text no-icon" required placeholder="Nivel de Prioridade" list="listprior">
+                <datalist id="prioridade">
+                    <option selected id="list-1" value="Básico">Básico (Azul)</option>
+                    <option id="list-2" value="Intermediário"> Intermediário (Amarelo)</option>
+                    <option id="list-3" value="Urgente"> Urgente (Vermelho)</option>
+                </datalist></select>
+                
+            </div>
+                <input type="submit" class="input-submit"  value="Criar Tarefa"> 
+            
+            </form>
+        </div>
+        </div>
+
+            
+        </div>
+    </div>     
+</body>
+</html>
