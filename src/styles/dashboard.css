@@ -49,19 +49,6 @@ body {
     width: 40px; 
     border-radius: 20px;
 }
-
-/*Configurações de Logo*/
-textarea::-webkit-scrollbar{
-    background-color: transparent;
-    width: 5px;
-    cursor: pointer;
-}
-
-textarea::-webkit-scrollbar-thumb{
-    background-color: #cccccc;
-    width: 5px;
-}
-
 ::-webkit-scrollbar{
     background-color: #f7f7f7;
     width: 0px;
@@ -223,6 +210,10 @@ textarea::-webkit-scrollbar-thumb{
 .urgente{
     background-color: #FF5858;
 }
+.urgente-task{
+    background-color: #ff58581a;
+}
+
 .intermediario{
     background-color: #F8D351;
 }
@@ -251,122 +242,11 @@ textarea::-webkit-scrollbar-thumb{
     border-radius: 20px;
     text-decoration: none;
 }
-.input-submit:hover,:focus,
-.create-task-button:hover,:focus{
-    background-color: #23a064;
-    text-decoration: none;
-}
-/*Configurações de Input*/
-
-.input-text{
-    background-color: #fff; 
-    padding: 16px 14px; 
-    padding-left: 36px;
-    border-radius: 10px; 
-    margin: 8px 0px;
-    border: 1px solid #d3d3d3;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    color: #8B8B8B;
-    font-size: 13px; 
-    font-weight: 500;
-}
 
 .no-icon{
     padding-left: 16px;
     box-sizing: border-box;
     width: 100%;
-}
-
-.descripition{
-    height: 200px;
-}
-
-
-.label{
-    position: absolute;
-    top: 42px;
-    left: 14px;
-    
-}
-
-.input-submit{
-    margin-top: 24px;
-    padding: 12px 0px;
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    text-indent: -36px;
-    font-family: "Montserrat";
-    font-weight: 500;
-    font-size: 16px;
-    background-color: #2BB673;
-    color:#fff ;
-}
-
-.input-data{
-    background-color: #fff; 
-    padding: 16px 14px; 
-    border-radius: 10px; 
-    margin: 8px 0px;
-    border: 1px solid #d3d3d3;
-    width: 100%;
-    box-sizing: border-box;
-    cursor: text;
-    outline: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #8B8B8B;
-    font-size: 13px; 
-    font-weight: 500;
-}
-
-input[type="text"]:hover,:focus,
-input[type="email"]:hover,:focus,
-input[type="password"]:hover,:focus,
-input[type="datetime-local"]:hover,:focus{
-    background-color: #F0F0F0;
-    border: 1px solid #d3d3d3;
-}
-
-
-.input-error{
-    color: #FF5858;
-    font-size: 12px; 
-    font-weight: 600;
-}
-
-.input-error-link{
-    color: #FF5858;
-    font-size: 12px; 
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.input-error-link:hover{
-    color: #f34545;
-}
-.select{
-    background-color: #fff; 
-    padding: 16px 14px; 
-    border-radius: 10px; 
-    margin: 8px 0px;
-    border: none;
-    max-width: 100%;
-    box-sizing: border-box;
-    outline: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #8B8B8B;
-    font-size: 13px; 
-    font-weight: 500;
-}
-
-.select:hover,:focus{
-    background-color: #F0F0F0;
-    border: 1px solid #d3d3d3;
 }
 
 .droplist{
