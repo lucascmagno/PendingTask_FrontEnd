@@ -37,9 +37,11 @@ body {
     margin-bottom: 40px;
     justify-content: space-between;
 }
-#btnAdicionarTarefa{
+
+#create-task:hover{
     cursor: pointer;
 }
+
 .login-div{
     position: relative;
     margin-top: 24px;
