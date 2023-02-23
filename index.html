@@ -1,58 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!--Link para os estilos-->
+    <title>Login | Tarefas Pendentes IFPA</title>
+
     <link rel="stylesheet" href="./src/styles/index.css">
-    <link rel="stylesheet" href="./src/styles/MediaQuery.css">
-    <!--Link para os scripts-->
 </head>
-<body>
-    <div class="header">
-        <span class="span_bold">Tarefas</span> Pendentes
-        <span class="span_bold" style="display: block; color: green;">IFPA 2023</span>
-    </div>
-    <section>
-        <h2>Login</h2>
-        <form action="#" method="post" autocomplete="on">
-            <label for="iemail">Email
-               
-            </label>
+
+<body style="background-color: #F7F7F7; min-height: 100vh;display: flex;justify-content: center; margin-bottom: 50px;">
+    <div class="body-style" style="width: 500px;">
+
+            <div class="logo-text" style="display: flex; flex-direction: column; align-items: center; margin-top: 40px; margin-bottom: 40px;"> 
+                <div class="logo-bold" style="font-size: 16px; font-weight: 800;"> &lt <span class="logo-text verde" style="color:#2BB673;">Tarefas </span>Pendentes &gt</div>
+                <div class="logo-slim" style="font-size: 10px; font-weight: 500; color: #8d8d8d;">IFPA 2023</div>
+            </div>
+
+            <div class="Login-header">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <div class="title-header">
+                        <span class="extrabold" style="margin-bottom: 6px;"> Bem-vindo de Volta!</span></span>
+                        <span class="subtitle">Entre com seu <span class="subtitle-bold"> email </span> e <span class="subtitle-bold">senha</span> cadastrados para acessar suas Tarefas</span>
+                    </div>
+                </div>
             
-            <input type="email" name="iemail" id="iemail" placeholder="Digite seu email" autocomplete="ema
-            ">
+            <form action="#" method="post" autocomplete="on">
 
-            <label for="isenha">Senha
-                <button type="button" id="showPassword"><img src="./src/components/images/Olho (habilitado).svg" alt="Senha abilitada" id="img"></button>
-            </label>
-            
-            <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" autocomplete="current-password">
+                <div class="login-div" id="iemail" style="margin-top: 40px;">
+                    <span class="title-section">Email</span>
 
-            <label for="isubmit"></label>
-            <input type="submit" id="isubmit" value="Entrar Agora" class="submit">
-        </form>
-       
-        <span style="font-size: 12px;"> Novo por aqui?<a href="./src/pages/cadastro.html" style="text-decoration: none;"> Crie uma conta</a></span>
-        <a href="./src/pages/dashboard.html>Página Tarefas</a>
-    </section>
-    <script>
-        const passwordInput = document.getElementById("isenha");
-        const showPasswordButton = document.getElementById("showPassword");
-        const img = document.getElementById('img');
-        showPasswordButton.addEventListener("click", function() {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            //showPasswordButton.textContent = "Ocultar senha";
-        } else {
-            passwordInput.type = "password";
-            //showPasswordButton.textContent = "Mostrar senha";
-        }
-        });
-    </script>
-    
+                    <label for="input" class="label"><img src="./src/components/images/Email.svg" alt="Email"></label>                    
+                    <input type="email" name="email" class= "input-text" required placeholder="Digite seu email">
+                    
+                    <span class="input-error" style="display: flex;"> <img src="./src/components/images/Error.svg" style="margin-right: 3px;"> Este email não está Cadastrado! <a class="input-error-link" href="create-profile.html" alt="Criar uma Conta" style="margin-left: 3px ;"> Crie uma Conta</a></div></span>
+                
 
+                    <div class="login-div" id="isenha">
+                        <span class="title-section">Senha</span>
+
+                        <label for="input" class="label" style="top: 42px;"><img src="./src/components/images/Vector.svg" alt="Senha"></label>
+
+                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="ver" src="./src/components/images/Olho  ( Desabilitado).svg" alt="Ver Senha"></label>
+
+                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="esc" src="./src/components/images/Olho (habilitado).svg" style="display: none;" alt="Ver Senha"></label>
+
+                        <input type="password" name="senha" class="senha input-text" minlength="6" maxlength="14" required placeholder="Digite sua senha">
+                                                
+                        <span class="input-error" style="display: flex;"> <img src="./src/components/images/Error.svg" style="margin-right: 3px;"> Ops! Sua senha está incorreta</span>
+
+                </div>
+                
+                <div class="login-div" id="isub" style="margin-top: 0px;">
+
+                    <label for="input" class="label" style="top: 36px; left: auto;  margin-left: 63%; box-sizing: border-box;"><img src="./src/components/images/Seta (Entrar).svg" alt="Entrar Agora"></label>
+
+                    <input type="submit" class="input-submit" value="Entrar Agora"> 
+                </div>
+            </form>
+
+            <div class="paragrapher" style="margin-top: 16px; display: flex;
+            justify-content: center;">Novo por aqui? <a class="paragrapher link"href="./src/pages/create-profile.html" alt="Criar uma Conta" style="margin-left: 3px ;"> Crie uma Conta</a></div>
+
+            <a class="paragrapher link"href="./src/pages/dashboard.html" alt="Criar uma Conta" style="margin-left: 3px ;"> Ver Dashboard</a>
+        </div>
+        </div>
+             
+    <script src="/src/scripts/senha.js"></script>   
 </body>
 </html>

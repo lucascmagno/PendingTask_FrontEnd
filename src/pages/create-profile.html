@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie uma Conta | Tarefas Pendentes IFPA</title>
+
+    <link rel="stylesheet" href="../styles/create-profile.css">
+</head>
+
+<body style="background-color: #F7F7F7; min-height: 100vh;display: flex;justify-content: center; margin-bottom: 50px;">
+    <div class="body-style" style="width: 500px;">
+
+            <div class="logo-text" style="display: flex; flex-direction: column; align-items: center; margin-top: 40px; margin-bottom: 40px;"> 
+                <div class="logo-bold" style="font-size: 16px; font-weight: 800;"> &lt <span class="logo-text verde" style="color:#2BB673;">Tarefas </span>Pendentes &gt</div>
+                <div class="logo-slim" style="font-size: 10px; font-weight: 500; color: #8d8d8d;">IFPA 2023</div>
+            </div>
+
+            <div class="Login-header">
+                <div style="display: flex; flex-direction: row;     align-items: center;">
+                    <div class="title-header">
+                        <span class="extrabold" style="margin-bottom: 6px;"> Crie uma Conta</span></span>
+                        <span class="subtitle">Nos preocupamos com cada detalhe para você fica sempre atualizado em suas Atividades.</br></span>
+                        <span class="subtitle-bold" style="margin-top: 3px;"> Feito por Estudantes, para Estudantes!</span>
+                    </div>
+                </div>
+            
+                <form action="#" method="post" autocomplete="on">
+
+                    <div class="login-div" id="iuser" style="margin-top: 40px;">
+                        <span class="title-section">Como podemos te Chamar?</span>
+
+                        <label for="input" class="label"><img src="../components/images/Pessoa (Nome de Usuário).svg" alt="Email"></label>      
+                        <input type="text" name="nome" class= "input-text" required placeholder="Digite seu primeiro nome">
+                    </div>
+
+                    <div class="login-div" id="iemail">
+                        <span class="title-section">Email</span>
+                        <label for="input" class="label"><img src="../components/images/Email.svg" alt="Email"></label>
+                        <input type="email" name="email" class= "input-text" required placeholder="Digite seu email">
+
+                        <span class="input-error" style="display: flex;"> <img src="../components/images/Error.svg" style="margin-right: 3px;"> Ops! Este email é inválido</span>
+
+                        <span class="input-error" style="display: flex;"> <img src="../components/images/Error.svg" style="margin-right: 3px;"> Este email já existe! <a class="input-error-link" href="index.html" alt="Faça Login" style="margin-left: 3px ;"> Faça Login</a></span>
+                    </div>
+                    
+
+                    <div class="login-div" id="isenha">
+                        <span class="title-section">Senha</span>
+
+                        <label for="input" class="label" style="top: 42px;"><img src="../components/images/Vector.svg" alt="Senha"></label>
+
+                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="ver" src="../components/images/Olho  ( Desabilitado).svg" alt="Ver Senha"></label>
+
+                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="esc" src="../components/images/Olho (habilitado).svg" style="display: none;" alt="Ver Senha"></label>
+
+                        <input type="password" name="senha" class="senha input-text" minlength="6" maxlength="14" required placeholder="Digite sua senha">
+                        <span class="subtitle">Sua senha deve conter no minimo 6 Caractéres</br></span>
+
+                      </div>
+                      
+                      
+                
+                <div class="login-div" id="isub" style="margin-top: 0px;">
+
+                    <label for="input" class="label" style="top: 36px; left: auto;  margin-left: 60%; box-sizing: border-box;"><img src="../components/images/Seta (Entrar).svg" alt="Entrar Agora"></label>
+
+                    <input type="submit" class="input-submit" value="Criar Conta"> 
+                </div>
+            </form>
+            
+            <div class="paragrapher" style="margin-top: 16px; display: flex;
+            justify-content: center;">Já possui uma conta? <a class="paragrapher link" href="index.html" alt="Faça Login" style="margin-left: 3px ;"> Faça Login</a></div>
+            <a class="paragrapher link"href="./dashboard.html" alt="Criar uma Conta" style="margin-left: 3px ;"> Ver Dashboard</a>
+        </div>
+        </div>
+            
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
