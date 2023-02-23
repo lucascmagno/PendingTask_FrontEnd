@@ -364,6 +364,10 @@ input[type="datetime-local"]:hover,:focus{
     font-weight: 500;
 }
 
+#showPassword{
+    border: none;
+    background-color: #FFFFFF;
+}
 .select:hover,:focus{
     background-color: #F0F0F0;
     border: 1px solid #d3d3d3;

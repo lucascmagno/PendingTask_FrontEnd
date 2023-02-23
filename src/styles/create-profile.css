@@ -375,6 +375,11 @@ input[type="datetime-local"]:hover,:focus{
     display: none;
 }
 
+#showPassword{
+    border: none;
+    background-color: #FFFFFF;
+}
+
 .itenlist{
     display: flex;
     align-items: center;

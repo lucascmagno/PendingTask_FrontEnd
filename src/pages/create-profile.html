@@ -6,6 +6,7 @@
     <title>Crie uma Conta | Tarefas Pendentes IFPA</title>
 
     <link rel="stylesheet" href="../styles/create-profile.css">
+    <script src="../scripts/senha.js"></script>
 </head>
 
 <body style="background-color: #F7F7F7; min-height: 100vh;display: flex;justify-content: center; margin-bottom: 50px;">
@@ -50,11 +51,9 @@
 
                         <label for="input" class="label" style="top: 42px;"><img src="../components/images/Vector.svg" alt="Senha"></label>
 
-                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="ver" src="../components/images/Olho  ( Desabilitado).svg" alt="Ver Senha"></label>
+                        <button for="input" class="label" id="showPassword" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="ver" src="../components/images/Olho  ( Desabilitado).svg" alt="Ver Senha"></button>
 
-                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="esc" src="../components/images/Olho (habilitado).svg" style="display: none;" alt="Ver Senha"></label>
-
-                        <input type="password" name="senha" class="senha input-text" minlength="6" maxlength="14" required placeholder="Digite sua senha">
+                        <input type="password" name="senha" id="password" class="senha input-text" minlength="6" maxlength="14" required placeholder="Digite sua senha">
                         <span class="subtitle">Sua senha deve conter no minimo 6 Caractéres</br></span>
 
                       </div>
@@ -77,7 +76,5 @@
             
         </div>
     </div>
-    
-    <script src="scripts.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Login | Tarefas Pendentes IFPA</title>
 
     <link rel="stylesheet" href="./src/styles/index.css">
+    <script src="/src/scripts/senha.js"></script>   
 </head>
 
 <body style="background-color: #F7F7F7; min-height: 100vh;display: flex;justify-content: center; margin-bottom: 50px;">
@@ -40,11 +41,9 @@
 
                         <label for="input" class="label" style="top: 42px;"><img src="./src/components/images/Vector.svg" alt="Senha"></label>
 
-                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="ver" src="./src/components/images/Olho  ( Desabilitado).svg" alt="Ver Senha"></label>
+                        <button for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;" id="showPassword" onclick="mostrarSenha()"><img id="ver" src="./src/components/images/Olho  ( Desabilitado).svg" alt="Ver Senha"></button>
 
-                        <label for="input" class="label" style="left: auto; top: 44px; right: 10px; padding: 0px 6px ;"><img id="esc" src="./src/components/images/Olho (habilitado).svg" style="display: none;" alt="Ver Senha"></label>
-
-                        <input type="password" name="senha" class="senha input-text" minlength="6" maxlength="14" required placeholder="Digite sua senha">
+                        <input type="password" name="senha" class="senha input-text" id="password" minlength="6" maxlength="14" required placeholder="Digite sua senha">
                                                 
                         <span class="input-error" style="display: flex;"> <img src="./src/components/images/Error.svg" style="margin-right: 3px;"> Ops! Sua senha está incorreta</span>
 
@@ -64,7 +63,5 @@
             <a class="paragrapher link"href="./src/pages/dashboard.html" alt="Criar uma Conta" style="margin-left: 3px ;"> Ver Dashboard</a>
         </div>
         </div>
-             
-    <script src="/src/scripts/senha.js"></script>   
 </body>
 </html>
