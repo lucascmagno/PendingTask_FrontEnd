@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #1D1D1D;
+    font-weight: 500;
+}
+
+/*Configurações de Corpo*/
+.body-style{
+    margin: 60px 30px 30px 30px;
+} 
+
+.dashboard-body{
+    display: flex; 
+    flex-direction: column;
+}
+
+.rotate {
+    transform: rotate(-90deg);
+    transition: transform 0.1s ease;
+}
+
+/*Cabeçalho Dashboard*/
+.dashboard-header{
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
+.login-header{
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+#btnAdicionarTarefa{
+    cursor: pointer;
+}
+.login-div{
+    position: relative;
+    margin-top: 24px;
+}
+.profile-photo{
+    height: 40px; 
+    width: 40px; 
+    border-radius: 20px;
+}
+
+/*Configurações de Logo*/
+textarea::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: #cccccc;
+    width: 5px;
+}
+
+::-webkit-scrollbar{
+    background-color: #f7f7f7;
+    width: 0px;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #cccccc;
+    width: 0px;
+    border-radius: 10px;
+}
+
+/* Configurações de Texto*/
+
+.title-header{
+    font-size: 20px;
+    display: flex; 
+    flex-direction: column;
+}
+
+.title-section{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.drop{
+    margin-bottom: 0px;
+}
+
+
+.bold{ 
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.extrabold{
+    font-weight: 800;
+    color: #1d1d1d;
+    text-decoration: none;
+}
+
+.subtitle{ 
+    color: #8B8B8B;
+    font-size: 12px; 
+    font-weight: 500;
+}
+.subtitle-bold{
+    color: #8B8B8B;
+    font-size: 12px; 
+    font-weight: 700;
+}
+.button-text{
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+.disable{
+    color: #8B8B8B;
+}
+
+.paragrapher{
+    font-size: 12px;
+    color: #8B8B8B;
+}
+
+.link{
+    color: #1D1D1D;
+    font-weight: 700;
+    text-decoration: none;
+}
+.link:hover{
+    color: #000000;
+}
+
+.link:focus{
+    color: #000000;
+}
+/*Barra de Progresso*/
+
+.bar {
+    margin-bottom: 40px
+}
+
+.progress-bar {
+    background-color: #F0F0F0; 
+    width: 100% ;
+    height: 5px; 
+    position: relative;
+    margin: 8px 0px; 
+    border-radius: 5px;
+}
+
+.top-bar{
+    background-color: #2BB673; 
+    width: 72%;
+    margin-top: -13px;
+}
+
+/*Configurações de Task*/
+.task{
+    background-color: #fff; 
+    padding: 16px 14px; 
+    border-radius: 10px; 
+    border: 1px solid #d3d3d3;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 0px;
+}
+
+.task-div{
+    margin-bottom: 32px;
+}
+
+.task-name{
+    display: flex; 
+    flex-direction: column;
+}
+
+.task-title{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.task-date{
+    margin-left: 8px;
+}
+
+.drop-task {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.drop-title{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    cursor: pointer; 
+}
+
+.drop-task-visible {
+    max-height: 1000px; /* ou qualquer valor suficientemente grande */
+}
+
+
+.priority{
+    display: flex; 
+    border-radius: 20px; 
+    margin-left: 8px; 
+    width: 8px; 
+    height: 8px; 
+    float: right;
+}
+
+.right{
+    margin-right: 8px;
+    margin-left: 16px;
+}
+
+.urgente{
+    background-color: #FF5858;
+}
+.intermediario{
+    background-color: #F8D351;
+}
+.basico{
+    background-color: #3879C1;
+}
+.concluido{
+    background-color: #2BB673;
+    
+    padding: 4px;
+}
+
+/*Configurações de Botão*/
+.button-primary{
+    padding: 12px 100%;
+    background-color: #2BB673;
+}
+.create-task-button{
+    display: flex;
+    align-items: center;
+    position: fixed; 
+    right: 32px; 
+    bottom: 50px;
+    padding: 12px 16px;
+    background-color: #2BB673;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.input-submit:hover,:focus,
+.create-task-button:hover,:focus{
+    background-color: #23a064;
+    text-decoration: none;
+}
+/*Configurações de Input*/
+
+.input-text{
+    background-color: #fff; 
+    padding: 16px 14px; 
+    padding-left: 36px;
+    border-radius: 10px; 
+    margin: 8px 0px;
+    border: 1px solid #d3d3d3;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B8B8B;
+    font-size: 13px; 
+    font-weight: 500;
+}
+
+.no-icon{
+    padding-left: 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.descripition{
+    height: 200px;
+}
+
+
+.label{
+    position: absolute;
+    top: 42px;
+    left: 14px;
+    
+}
+
+.input-submit{
+    margin-top: 24px;
+    padding: 12px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    text-indent: -36px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #2BB673;
+    color:#fff ;
+}
+
+.input-data{
+    background-color: #fff; 
+    padding: 16px 14px; 
+    border-radius: 10px; 
+    margin: 8px 0px;
+    border: 1px solid #d3d3d3;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: text;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B8B8B;
+    font-size: 13px; 
+    font-weight: 500;
+}
+
+input[type="text"]:hover,:focus,
+input[type="email"]:hover,:focus,
+input[type="password"]:hover,:focus,
+input[type="datetime-local"]:hover,:focus{
+    background-color: #F0F0F0;
+    border: 1px solid #d3d3d3;
+}
+
+
+.input-error{
+    color: #FF5858;
+    font-size: 12px; 
+    font-weight: 600;
+}
+
+.input-error-link{
+    color: #FF5858;
+    font-size: 12px; 
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.input-error-link:hover{
+    color: #f34545;
+}
+
+.select{
+    background-color: #fff; 
+    padding: 16px 14px; 
+    border-radius: 10px; 
+    margin: 8px 0px;
+    border: none;
+    max-width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B8B8B;
+    font-size: 13px; 
+    font-weight: 500;
+}
+
+.select:hover,:focus{
+    background-color: #F0F0F0;
+    border: 1px solid #d3d3d3;
+}
+
+.droplist{
+    background-color: #fff;
+    border-radius: 10px;
+    display: none;
+}
+
+.itenlist{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 6px 0px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+    color: #8B8B8B;
+    font-size: 13px; 
+    font-weight: 500;
+}
+.itenlist:hover{
+    background-color: #F0F0F0;
+}
