@@ -9,7 +9,7 @@ function createTask(){
     var prioridade = document.getElementById('prioridade').value;
 
     // cria um objeto XMLHttpRequest
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
 
     // define a função de callback para lidar com a resposta do servidor
     xhr.onreadystatechange = function() {
@@ -19,16 +19,12 @@ function createTask(){
     };
 
     // define o método HTTP e o arquivo PHP de destino
-    xhr.open('POST', 'createTask.php', true);
+    xhr.open('POST', '../../createTask.php', true);
 
     // define o cabeçalho HTTP necessário para enviar dados do formulário
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     // envia os dados do formulário como uma string codificada
-    xhr.send('titulo=' + encodeURIComponent(titulo) +
-            '&materia=' + encodeURIComponent(materia) +
-            '&descricao=' + encodeURIComponent(descricao) +
-            '&entrega=' + encodeURIComponent(entrega) +
-            '&horario=' + encodeURIComponent(horario) +
-            '&prioridade=' + encodeURIComponent(prioridade));
+    const params = `title=${titulo}&materia=${materia}&descricao=${descricao}&data=${entrega}&horario=${horario}&prioridade=${prioridade}`;
+    xhttp.send(params);
 }

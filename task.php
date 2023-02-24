@@ -14,6 +14,7 @@ foreach ($result as $row) : ?>
         <div class="task-name">
             <span class="task-title"><?= $row['task'] ?></span>
             <span class="subtitle task-materia"><?= $row['subject'] ?></span>
+            <span class="subtitle task-descricao"><?= $row['description']?></span>
         </div>
 
         <div style="display: flex; align-items: center;">

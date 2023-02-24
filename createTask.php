@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "pendingtasks";
+$dbname = "pending_task";
 
 // cria uma nova conexão com o banco de dados usando PDO
 try {
@@ -11,8 +11,8 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // prepara a instrução INSERT
-  $stmt = $conn->prepare("INSERT INTO tasks (titulo, materia, descricao, data, horario, prioridade)
-  VALUES (:titulo, :materia, :descricao, :data, :horario, :prioridade)");
+  $stmt = $conn->prepare("INSERT INTO pending_task (id,id_login,task, subject, description, data, horario, priority)
+  VALUES ('','1', :titulo, :materia, :descricao, :data, :horario, :prioridade)");
 
   // atribui valores aos parâmetros da instrução INSERT
   $stmt->bindParam(':titulo', $_POST['titulo']);
