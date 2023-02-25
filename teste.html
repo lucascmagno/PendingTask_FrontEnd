@@ -5,98 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .create-task{
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-      border-bottom: 1px solid black;
-    }
-    .create-task input, button, select{
-      width: 200px;
-      margin-bottom: 5px;
-    }
-    .tasks{
 
-    }
-  </style>
-  <link rel="stylesheet" href="./src/styles/tasks2.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#botao-ajax").click(function() {
+        $.ajax({
+          url: "task.php",
+          type: "GET",
+          //data: {},
+          success: function(result) {
+            $("#resultado-ajax").html(result);
+          },
+          error: function() {
+            alert("Ocorreu um erro ao enviar a solicitação Ajax.");
+          }
+        });
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="./src/styles/dashboard.css">
 </head>
 <body>
-  <!--cria as tarefas-->
-  <div class="create-task">
-    <h2>Criar Tarefa</h2><br>
-    Titulo: <input type="text" name="titulo" id="ititulo">
+  <button id="botao-ajax">Clique aqui para fazer uma solicitação Ajax</button>
+  <div id="resultado-ajax"></div>
 
-    Matéria: <input type="text" name="materia" id="imateria">
-
-    Descrição: <input type="text" name="descricao" id="idescricao">
-
-    Entrega: <input type="datetime-local" name="data" id="idata">
-
-    Prioridade: <select name="prioridade" id="iprioridade">
-      <option value="" selected>Básico</option>
-      <option value="">medio</option>
-      <option value="">Urgente</option>
-    </select>
-    <button onclick="createTask()">Criar tarefa</button>
-  </div>
-
-  <!--Tarefas criadas-->
-<div id="tasks">
-      <!--Tarefas Pendentes-->
-      <span class="title-section" style="background-color: #2BB673; border: #2BB673;">Tarefas Pendentes: ##</span>
-
-  <div id="taskContent" class="pendente-task task-div">
-    <div class="task" id="taskText">
-        <div class="task-name">
-              <span class="task-title">Isso é uma atividade</span>
-
-              <span class="subtitle task-materia"> Desenvolvimento de Sistemas</span>
-
-              <span></span>
-            </div>
-      
-        <div id="taskDate" style="display: flex; align-items: center;">
-              <span class="subtitle task-date">FEV 19 <span class="bold" style="margin-left: 3px;">08:40</span></span>
-              <span class="priority intermediario"></span>
-         </div>
-    </div>
-
-    
-  </div>
-</div>
-  <script>
-    function createTask() {
-  // Obter os valores dos campos de formulário
-  const title = document.getElementById("ititulo").value;
-  const materia = document.getElementById("imateria").value;
-  const descricao = document.getElementById("idescricao").value;
-  const data = document.getElementById("idata").value;
-  const prioridade = document.getElementById("iprioridade").value;
-
-  // Criar um novo elemento de tarefa
-  const newTask = document.createElement("div");
-  newTask.classList.add("task");
-
-  // Adicionar o conteúdo do novo elemento
-  newTask.innerHTML = `
-    <div class="task-name">
-      <span class="task-title">Titulo: ${title}</span>
-      <span class="subtitle task-materia">Matéria: ${materia}</span>
-      <span>Descrição: ${descricao}</span>
-    </div>
-    <div id="taskDate" style="display: flex; align-items: center;">
-      <span class="subtitle task-date">${data}</span>
-      <span class="priority ${prioridade.toLowerCase()} intermediario"></span>
-    </div>
-  `;
-
-  // Adicionar o novo elemento de tarefa à seção de tarefas criadas
-  const taskContent = document.getElementById("taskContent");
-  taskContent.appendChild(newTask);
-}
-
-  </script>
 </body>
 </html>
