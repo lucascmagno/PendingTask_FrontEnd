@@ -1,6 +1,4 @@
-// recupera os elementos do formulário
-function createTask(){
-    var form = document.querySelector('form');
+function createTask() {
     var titulo = document.getElementById('titulo').value;
     var materia = document.getElementById('materia').value;
     var descricao = document.getElementById('descricao').value;
@@ -13,9 +11,9 @@ function createTask(){
 
     // define a função de callback para lidar com a resposta do servidor
     xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        console.log(xhr.responseText);
-    }
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(xhr.responseText);
+        }
     };
 
     // define o método HTTP e o arquivo PHP de destino
@@ -25,6 +23,6 @@ function createTask(){
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     // envia os dados do formulário como uma string codificada
-    const params = `title=${titulo}&materia=${materia}&descricao=${descricao}&data=${entrega}&horario=${horario}&prioridade=${prioridade}`;
-    xhttp.send(params);
+    const params = `titulo=${titulo}&materia=${materia}&descricao=${descricao}&data=${entrega}&horario=${horario}&prioridade=${prioridade}`;
+    xhr.send(params);
 }
