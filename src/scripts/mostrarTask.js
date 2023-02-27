@@ -4,7 +4,7 @@ function mostrarTask(){
     $(document).ready(function() {
       $("#botao-ajax").click(function() {
         $.ajax({
-          url: "task.php",
+          url: "../../task.php",
           type: "GET",
           //data: {},
           success: function(result) {
