@@ -1,15 +1,11 @@
 function createProfile(){
     const form = document.querySelector('form');
         
+    const nome = document.getElementById('inome');
+    const email = document.getElementById('iemail');
+    const senha = document.getElementById('password');
     // Adiciona o evento de submit ao formulário
-    form.addEventListener('submit', (event) => {
-        // Previne o comportamento padrão do formulário de recarregar a página
-        event.preventDefault();
-
-        //seleciona os inputs pelo id
-        const nome = document.getElementById('inome');
-        const email = document.getElementById('iemail');
-        const senha = document.getElementById('password');
+    if(form.addEventListener('submit')){
     
         const xhr = new XMLHttpRequest();
     
@@ -22,7 +18,7 @@ function createProfile(){
     
         // define o método HTTP e o arquivo PHP de destino    
         // define o cabeçalho HTTP necessário para enviar dados do formulário
-        xhr.open('POST', '../../createProfile.php', true);
+        xhr.open('POST', 'CreateProfile.php', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     
         // envia os dados do formulário como uma string codificada
