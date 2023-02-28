@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../styles/create-profile.css">
     <script src="../scripts/senha.js"></script>
+    <script src="../scripts/AjaxCreateProfile.js"></script>
 </head>
 
 <body style="background-color: #F7F7F7; min-height: 100vh;display: flex;justify-content: center; margin-bottom: 50px;">
@@ -32,13 +33,13 @@
                         <span class="title-section">Como podemos te Chamar?</span>
 
                         <label for="input" class="label"><img src="../components/images/Pessoa (Nome de Usuário).svg" alt="Email"></label>      
-                        <input type="text" name="nome" class= "input-text" required placeholder="Digite seu primeiro nome">
+                        <input type="text" name="nome" id="inome" class= "input-text" required placeholder="Digite seu primeiro nome">
                     </div>
 
                     <div class="login-div" id="iemail">
                         <span class="title-section">Email</span>
                         <label for="input" class="label"><img src="../components/images/Email.svg" alt="Email"></label>
-                        <input type="email" name="email" class= "input-text" required placeholder="Digite seu email">
+                        <input type="email" name="email" id="iemail" class= "input-text" required placeholder="Digite seu email">
 
                         <span class="input-error" style="display: flex;"> <img src="../components/images/Error.svg" style="margin-right: 3px;"> Ops! Este email é inválido</span>
 
