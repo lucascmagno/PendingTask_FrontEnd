@@ -1,10 +1,10 @@
 function createTask() {
-    var titulo = document.getElementById('titulo').value;
-    var materia = document.getElementById('materia').value;
-    var descricao = document.getElementById('descricao').value;
-    var entrega = document.getElementById('entrega').value;
-    var horario = document.getElementById('horario').value;
-    var prioridade = document.getElementById('prioridade').value;
+    const titulo = document.getElementById('titulo').value;
+    const materia = document.getElementById('materia').value;
+    const descricao = document.getElementById('descricao').value;
+    const entrega = document.getElementById('entrega').value;
+    const horario = document.getElementById('horario').value;
+    const prioridade = document.getElementById('prioridade').value;
 
     // cria um objeto XMLHttpRequest
     const xhr = new XMLHttpRequest();
